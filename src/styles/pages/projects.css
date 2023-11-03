@@ -1,0 +1,24 @@
+
+.collab{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+.collab img{
+    object-fit: cover;
+}
+.collab img:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s;
+}
+.box{
+    margin-left:50px ;
+    margin-top: 50px;
+}
+.first-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
