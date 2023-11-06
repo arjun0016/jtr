@@ -21,6 +21,7 @@ import slide6 from "../images/lab/19.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+
 const Home = () => {
   const sliderRef = useRef(null);
 
@@ -34,7 +35,7 @@ const Home = () => {
 
   useEffect(() => {
     AOS.init({
-      offset: 200
+      offset: 200,
     });
   });
 
@@ -93,7 +94,6 @@ const Home = () => {
       <div className="brochure-btn">
         <button className=" btn btn-outline-light">Download Brochure</button>
       </div>
-
 
       <About />
       <Services />

@@ -55,7 +55,7 @@ const About = () => {
           <img src={blueImages[(currentImageIndex + 1) % blueImages.length]} alt="" />
         </div> */}
       </div>
-      <div className="about-elements">
+      <div className="about-elements" >
         <div
           data-aos="fade-right"
           data-aos-duration="2000"
@@ -93,6 +93,7 @@ const About = () => {
           {/* <div data-aos="fade-left" data-aos-duration="2000"  className='about-btn mb-5 d-flex justify-content-center'>
           <button className='btn btn-outline-dark'>Contact Us</button></div> */}
         </div>
+
       </div>
     </div>
   );

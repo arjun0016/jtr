@@ -9,15 +9,16 @@ import { GoHome } from "react-icons/go";
 import logo from "../images/Logo.jpg";
 
 import { Drawer, Box, ListItem, List } from "@mui/material";
-import ProductsDropdown from "./ProductsList";
+
+import ProductList from "./ProductsList";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const [isProductsDropdownOpen, setProductsDropdownOpen] = useState(false);
 
-  const handleProductsDropdown = () => {
-    setProductsDropdownOpen(!isProductsDropdownOpen);
+  const handleProductsDropdown = (isOpen) => {
+    setProductsDropdownOpen(isOpen);
   };
 
   const location = useLocation();
@@ -68,7 +69,7 @@ const Navbar = () => {
   }, [prevScrollpos]);
 
   const navbarStyle = {
-    position: isScrollingDown ? "fixed" : "absolute",
+    position: isScrollingDown ? "fixed" : "absolute"
   };
 
   const list = () => (
@@ -104,15 +105,17 @@ const Navbar = () => {
               </li>
               <hr />
               <li>
-                <a href="/projectpage">Projects</a>
+                <Link to="/projectpage" className="project-link">
+                  Projects
+                </Link>
               </li>
               <hr />
               <li>
-                <a href="/servicepage">Products</a>
+                <Link to="/servicepage">Products</Link>
               </li>
               <hr />
               <li>
-                <a href="/contactpage">Contact Us</a>
+                <Link to="/contactpage">Contact Us</Link>
               </li>
             </div>
           </div>
@@ -139,63 +142,49 @@ const Navbar = () => {
         </div>
 
         <div className="nav-links">
-          <a
-            href="/"
+          <Link
+            to="/"
             className={clickedLink === 0 ? "clicked" : ""}
             onClick={() => handleLinkClick(0)}
           >
-            <a href="/">
-              <GoHome className="home-icon" />
-            </a>
-          </a>
-          <a
-            href="/aboutpage"
+            <GoHome className="home-icon" />
+          </Link>
+          <Link
+            to="/aboutpage"
             className={clickedLink === 1 ? "clicked" : ""}
             onClick={() => handleLinkClick(1)}
           >
-            <Link
-              className={clickedLink === 1 ? "clicked" : ""}
-              onClick={() => handleLinkClick(1)}
-              to="/aboutpage"
-            >
-              WHO WE ARE
-            </Link>
-          </a>
-          <a
-            href="/servicepage"
+            WHO WE ARE
+          </Link>
+          <Link
+            to="/servicepage"
             className={clickedLink === 3 ? "clicked" : ""}
             onClick={() => handleLinkClick(3)}
+            onMouseEnter={() => handleProductsDropdown(true)}
+            onMouseLeave={() => handleProductsDropdown(false)}
           >
-            <a
-              href="/servicepage"
-              onMouseEnter={() => handleProductsDropdown(true)}
-              onMouseLeave={() => handleProductsDropdown(false)}
-            >
-              PRODUCTS
-            </a>
-          </a>
-          <a
-            href="/projectpage"
+            <span>PRODUCTS</span>
+          </Link>
+
+          <Link
+            to="/projectpage"
             className={clickedLink === 2 ? "clicked" : ""}
             onClick={() => handleLinkClick(2)}
           >
-            <Link
-              className={clickedLink === 2 ? "clicked" : ""}
-              onClick={() => handleLinkClick(2)}
-              to="/projectpage"
-            >
-              PROJECTS
-            </Link>
-          </a>
-          <a
-            href="/contactpage"
+            PROJECTS
+          </Link>
+          <Link
+            to="/contactpage"
             className={clickedLink === 4 ? "clicked" : ""}
             onClick={() => handleLinkClick(4)}
           >
-            <a href="/contactpage">CONTACT US</a>
-          </a>
+            CONTACT US
+          </Link>
         </div>
-        {/* <ProductsDropdown isProductsDropdownOpen={isProductsDropdownOpen} /> */}
+        <ProductList
+          isProductsDropdownOpen={isProductsDropdownOpen}
+          handleProductsDropdown={handleProductsDropdown}
+        />
 
         <Drawer open={open} anchor="top" onClose={handleClose}>
           {list()}

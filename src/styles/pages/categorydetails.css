@@ -1,6 +1,9 @@
 .category-detailspage{
-    
+    position: relative;
+    /* background-image:url(../../images/lab/background.jpg); */
+}
 
+.category-details-wrap{
 }
 .category-detailspage-img img{
     object-fit:cover;
@@ -21,7 +24,16 @@
     width: 100%;
     font-weight: 700;
     font-size: 100px;
+    margin-inline-start: 10%;
+    background-color: #409bd4;
+    color: WHITE;
 }
+.category-details-content hr{
+    margin-inline-start: 20%;
+
+}
+
+
 
 .category-details-para{
     display:flex;
@@ -40,6 +52,8 @@
     width: 70%;
     font-size: 25px;
     color: black;
+    margin-inline-start: 10%;
+
 }
 .category-details p{
     font-weight:500;
@@ -50,23 +64,25 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-inline-start: 10%;
 }
 .category-details-wrap img{
     object-fit: contain;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     margin-left:15px;
     margin-top: 15px;
 }
 .category-details-wrap #co{
     object-fit: cover;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     margin-left:15px;
     margin-top: 15px;
 }
 .process{
     margin-top: 50px;
+    
 }
 .process h4{
     font-weight: 800;
