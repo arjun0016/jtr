@@ -13,11 +13,11 @@ const ContactPage = () => {
   },[]);
 
   return (
-    <div>
+    <div className='con'>
 
 
 
-    <div className='contactpage'>
+    <div className='contactpage pb-5'>
       <Navbar />
       <div className='contactpage-img'>
         <img src={ContactPageImg} alt="" />
@@ -67,10 +67,10 @@ const ContactPage = () => {
       </div>
 
 
-      <div className='map'>
+      {/* <div className='map'>
       <GoogleMap />
 
-    </div>
+    </div> */}
     </div>
     <Footer/>      
     </div>

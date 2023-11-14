@@ -8,11 +8,13 @@
   }
   
 .home{
-    background:url(../images/lab/background.jpg);
+    background:url(../images/BG\ 1.png);
+
     font-family: 'CustomFont', sans-serif;
 }
 
 .slider-container{
+   
     font-family: 'Oswald', sans-serif;
     display: flex;
     justify-content:center;
@@ -31,6 +33,7 @@
     justify-content: center;
     text-align: center;
     z-index:100;
+    left: 0%;
     top: 30%;
     background-color: rgba(0, 0, 0, 0.366);
 }

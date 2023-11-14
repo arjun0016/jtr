@@ -1,3 +1,6 @@
+.aboutpage{
+    background:url(../../images/BG\ 1.png);
+}
 .aboutpagec{
     display: flex;
     justify-content:center;

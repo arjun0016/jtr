@@ -62,7 +62,7 @@ const Category = () => {
     
         <div className={`category-content ${isClicked ? 'click':''}`}>
           <h2>{selectedCategory.name}</h2>
-          <p>{selectedCategory.content1}</p>
+          <p>{selectedCategory.hospital|| selectedCategory.content1}</p>
           <Link to={`/categorypage/${selectedCategory.id}`}>
             <button className='btn btn-light'>{selectedCategory.button}</button>
           </Link>

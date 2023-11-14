@@ -14,52 +14,14 @@ import Brand11 from "../images/Brands/12.png"
 import Brand12 from "../images/Brands/13.png"
 import Brand13 from "../images/Brands/14.jpg"
 import Brand14 from "../images/Brands/15.png"
-import Slider from 'react-slick'
 
 
 
 
-const Clients = () => {
-
-
-  var settings = {
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed:1000,
-    autoplaySpeed:1000,
-    pauseOnHover: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          // dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  };
 
 
 
+const Brands = () => {
   return (
     <div className='brands'>
       
@@ -79,22 +41,20 @@ const Clients = () => {
       </div>
 
             <div className="scrolling-brands">
-              <Slider {...settings}>
-              <div className='scrolling-img' ><img src={Brand1} width={150} height={150} alt="" /></div>
-              <div className='scrolling-img' ><img src={Brand2} width={150} height={150} alt="" /></div>
-              <div className='scrolling-img' ><img src={Brand3} width={150} height={150} alt="" /></div>
-              <div className='scrolling-img' ><img src={Brand4} width={150} height={150} alt="" /></div>
-              <div className='scrolling-img' ><img src={Brand5} width={150} height={150} alt="" /></div>
-              <div className='scrolling-img' ><img src={Brand6} width={150} height={150} alt="" /></div>
-              <div className='scrolling-img' ><img src={Brand7} width={150} height={150} alt="" /></div>
-              <div className='scrolling-img' ><img src={Brand8} width={150} height={150} alt="" /></div>
-              <div className='scrolling-img' ><img src={Brand9} width={150} height={150} alt="" /></div>
-              <div className='scrolling-img' ><img src={Brand10} width={150} height={150} alt="" /></div>
-              <div className='scrolling-img' ><img src={Brand11} width={150} height={150} alt="" /></div>
-              <div className='scrolling-img' ><img src={Brand12} width={150} height={150} alt="" /></div>
-              <div className='scrolling-img' ><img src={Brand13} width={150} height={150} alt="" /></div>
-              <div className='scrolling-img' ><img src={Brand14} width={150} height={150} alt="" /></div>
-              </Slider>
+              <div className='scrolling-bimg' ><img src={Brand1} width={150} height={150} alt="" /></div>
+              <div className='scrolling-bimg' ><img src={Brand2} width={150} height={150} alt="" /></div>
+              <div className='scrolling-bimg' ><img src={Brand3} width={150} height={150} alt="" /></div>
+              <div className='scrolling-bimg' ><img src={Brand4} width={150} height={150} alt="" /></div>
+              <div className='scrolling-bimg' ><img src={Brand5} width={150} height={150} alt="" /></div>
+              <div className='scrolling-bimg' ><img src={Brand6} width={150} height={150} alt="" /></div>
+              <div className='scrolling-bimg' ><img src={Brand7} width={150} height={150} alt="" /></div>
+              <div className='scrolling-bimg' ><img src={Brand8} width={150} height={150} alt="" /></div>
+              <div className='scrolling-bimg' ><img src={Brand9} width={150} height={150} alt="" /></div>
+              <div className='scrolling-bimg' ><img src={Brand10} width={150} height={150} alt="" /></div>
+              <div className='scrolling-bimg' ><img src={Brand11} width={150} height={150} alt="" /></div>
+              <div className='scrolling-bimg' ><img src={Brand12} width={150} height={150} alt="" /></div>
+              <div className='scrolling-bimg' ><img src={Brand13} width={150} height={150} alt="" /></div>
+              <div className='scrolling-bimg' ><img src={Brand14} width={150} height={150} alt="" /></div>
 
               </div>
             </div>            
@@ -102,4 +62,4 @@ const Clients = () => {
   )
 }
 
-export default Clients
+export default Brands

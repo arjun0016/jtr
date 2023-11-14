@@ -7,6 +7,7 @@ import aboutPageImg from "../../images/about.jpg"
 import Navbar from '../Navbar'
 import Footer from '../Footer'
 import Aos from 'aos'
+import Accordion from '../Accordion'
 
 
 const AboutPage = () => {
@@ -78,6 +79,9 @@ const AboutPage = () => {
       </div>
 
       <hr className='w-75 me-auto ms-auto'/>
+      <div className='d-flex justify-content-center mt-5'>
+          <Accordion/>
+          </div>
 
       
 

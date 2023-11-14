@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import Slider from "react-slick";
-import img1 from "../images/lab/01.jpg"
 import Brand1 from "../images/Brands/1.png"
 import Brand2 from "../images/Brands/2.png"
 import Brand3 from "../images/Brands/3.png"
@@ -67,7 +66,7 @@ const Brandslick = () => {
 
   return (
 
-<div className='brandslider'>
+<div className='brandslider mt-5'>
 <div className='brandslick-heading'>
           <h2>
           {Array.from(`OUR BRANDS`).map((letter, index) => (

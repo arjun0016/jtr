@@ -3,18 +3,19 @@ import Footer from '../Footer'
 import aboutPageImg from "../../images/home2.jpg"
 import one from  "../../images/1.jpg"
 import two from  "../../images/2.jpg"
-import three from  "../../images/3.jpg"
-import four from "../../images/lab/01.jpg"
-import five from "../../images/lab/02.JPG"
-import six from "../../images/lab/03.jpg"
-import seven from "../../images/lab/04.jpg"
-import eight from "../../images/lab/05.JPG"
-import nine from "../../images/lab/06.jpg"
+import three from  "../../images/3.webp"
+import four from "../../images/lab/01.webp"
+import five from "../../images/lab/02.webp"
+import six from "../../images/lab/03.webp"
+import seven from "../../images/lab/04.webp"
+import eight from "../../images/lab/05.webp"
+import nine from "../../images/lab/06.webp"
 import Navbar from '../Navbar'
+import "../../styles/pages/projects.css"
 
 const Projects = () => {
   return (
-    <div>
+    <div className='projects'>
 
 
     <Navbar />

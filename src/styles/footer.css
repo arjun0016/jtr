@@ -1,183 +1,83 @@
-.footer{
-    width: 100%;
+.footer_wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	position: relative;
+	bottom: -200px;
     background-color: white;
+
 }
-.footer-image-container{
-    position: relative;
+
+.footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-inline: 5rem;
+	padding-block: 1.5rem;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+}
+
+.footer::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: url("https://themes.pixelwars.org/renovatio/demo-01/wp-content/uploads/sites/2/2023/06/composition-living-room-interior-with-copy-spaceplants-cacti-boho-accessories-template.jpg");
+	background-size: cover;
+	opacity: 0.1;
+	z-index: -1;
+}
+
+.mt {
+	margin-block-start: 3rem;
+}
+.contacts {
+	text-align: start;
+}
+
+.pages a {
+	text-decoration: none;
+	color: var(--primary);
+	font-weight: 500;
+}
+.copyrights {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	gap: 0.1em;
+	color: black;
+}
+.copyrights a {
+	text-decoration: none;
+	color: var(--primary);
+}
+@media (width <= 50em) {
+	.footer {
+		display: flex;
+		flex-direction: column;
+		padding-inline: 2rem;
+
+	}
+
+	.mt {
+		margin-block-start: 0.5rem;
+		
+	}
+    
+.footer_wrapper h3{
     width: 100%;
-
-}
-.footer-background{
-    opacity: 0.05;
-    object-fit: cover;
-    width: 100%;
-    height: 400px;
-
-}
-.footer-logo{
-    position: absolute;
-    top: 5%;
-    left: 5%;
-}
-.footer-logo-img{
-    width: 50px;
-    height: 50px;
-    z-index: 1;
-
-
-}
-.footer-content{
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    width: 93%;
-    margin-left: 76px;
-    top: 30%;
-    z-index: 1;
-    text-align: center;
-}
-.footer-content h2{
-    /* font-weight: 700; */
-    font-size: 16px;
-    font-weight: 700;
-}
-.footer-content p{
-    margin-left: 10px;
-    /* margin-top: 10px; */
-    line-height: 20px;
-    font-size: 20px;
-    font-weight: 700;
-    color: black;
-
 }
 .copyrights{
-    display:flex;
-    justify-content:center;
-    font-size: 12px;
-    background-color: white;
-
-}
-.copyrights a{
-    text-decoration: none;
-    color: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-.mapped{
-    width: 25%;
-    text-align: center;
-    margin-top: -80px;
-}
-.contacts{
-        width: 20%;
-        height: 315px;
-        margin-top:-80px ;
-        text-align:start;
 
-}
-.contacts form{
-    margin-top: 0;
-}
-
-.contacts input,.contacts textarea,.contacts label {
-    width: 18vw;
-    display: block;
-  }
-  .pages, .company, .info{
-    margin-top: -80px;
-}
-.both{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    
-}
-.pages h3, .info h3, .contacts h3, .mapped h3{
-    width: 100%;
-}
-.mt{
-    margin-top: 50px;
-}
-.pages a{
-    text-decoration: none;
-    color: black;
-}
-
-@media screen and (max-width:800px) {
-
-    .footer{
-        width: 100%;
-    }
-
-    .footer-content{
-        width: 100%;
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: start;
-        top: 0%;
-        margin-left:0px;
-
-        /* left: 0%; */
-        margin-bottom: 0!important;
-    }
-    .contacts{
-        width: 60%;
-        height: 315px;
-        margin-top:0px ;
-
-}
-
-    .footer-background{
-        opacity: 0.05;
-        object-fit: cover;
-        width: 100%;
-        height: 1100px;
-    
-    }
-    .pages{
-        /* margin-left: 50%; */
-        width: 60%;
-        text-align: center;
-        margin-top:0px;
-        margin-bottom: 0px!important;
-    }
-     .info{
-        /* margin-left: 50%; */
-        width: 60%;
-        text-align: center;
-        margin-top:0px;
-        margin-bottom:100px;
-    }
-    .pages h3, .info h3{
-        width: 100%;
-    }
-    
-    .both{
-        width: 100%;
-        
-    }
-
-    .copyrights{
-        display:flex;
-        flex-direction: column;
-        justify-content:center;
-        align-items: center;
-        font-size: 12px;
-        line-height: 5px;
-    
-    }
-    .mapped{
-        width: 60%;
-        text-align: center;
-        margin-top: -100px;
-    }
-    .mapped h3{
-        margin-bottom: 20px;
-    }
-    .contacts input,.contacts textarea,.contacts label {
-        width: 60vw;
-        display: block;
-      }
 }

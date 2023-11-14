@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400;500&family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
+.servicepage{
+  background:url(../../images/BG\ 1.png);
+}
 .servicepage-img{
     filter: brightness(50%); 
 }
@@ -28,7 +31,7 @@
   font-size: 16px;
   font-family: "Poppins";
   --color-1: hsl(0, 0%, 5%);
-  --color-2: hsl(0, 0%, 95%);
+  --color-2: hsla(0, 0%, 95%, 0.9);
   --color-3: hsl(0, 0%, 30%);
   --color-4: hsla(0, 0%, 55%, 0.5);
   --color-5: hsl(35, 81%, 56%);
@@ -43,6 +46,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
+  margin-block: 3rem;
 }
 
 .cards {

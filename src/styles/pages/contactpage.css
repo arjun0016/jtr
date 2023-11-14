@@ -1,3 +1,8 @@
+
+.con{
+  background:url(../../images/BG\ 1.png);
+
+}
 .contactpagec{
     display: flex;
     justify-content:center;
@@ -35,7 +40,7 @@
 :root {
     --primary-color:rgb(2,68,142);
     --secondary-color:rgb(2,68,142);
-    --bg-color: #ffffff;
+    --bg-color: #ffffff00;
     --button-color:rgb(2,68,142);
   }
   
@@ -99,7 +104,7 @@
     text-transform: uppercase;
     font-weight: 300;
     background: var(--button-color);
-    color: var(--bg-color);
+    color: white;
     width: 10rem;
     height: 2.25rem;
     border: none;
@@ -139,6 +144,7 @@
 .contact-details h5{
   font-weight: 700;
 }
+
   
   @media only screen and (max-width: 950px) {
 

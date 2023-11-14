@@ -1,14 +1,9 @@
-.client{
-  height: 325px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .client-heading{
-  margin-left: 10%;
-
-
-
+  position:absolute;
+  top:10%;
+  left: 5%;
+  width: 500px;
+  z-index: 100;
 }
 .client-heading h2{
   font-weight: 800;
@@ -17,7 +12,17 @@
   position: relative;
   overflow-x: hidden;
   width: 100%;
+
+
+  
+  
+  /* flex-wrap: wrap; */
 }
+.color-overlay {
+  height: 300px;
+
+}
+
 
 
 
@@ -43,8 +48,8 @@
 
 
 .scrolling-img img {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
   transition:transform 0.1s;
 }

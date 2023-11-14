@@ -3,15 +3,14 @@ import "../styles/about.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import smart from "../images/Logo.jpg";
-import one from "../images/lab/01.jpg";
-import two from "../images/lab/02.JPG";
-import three from "../images/lab/03.jpg";
-import four from "../images/lab/04.jpg";
-import five from "../images/lab/05.JPG";
-import six from "../images/lab/06.jpg";
-import seven from "../images/lab/07.jpeg";
-import eight from "../images/lab/08.jpg";
-
+import one from "../images/lab/01.webp";
+import two from "../images/lab/02.webp";
+import three from "../images/lab/03.webp";
+import four from "../images/lab/04.webp";
+import five from "../images/lab/05.webp";
+import six from "../images/lab/06.webp";
+import seven from "../images/lab/07.webp";
+import eight from "../images/lab/08.webp";
 const About = () => {
   // Define an array of image sources
   const blueImages = [
@@ -46,7 +45,7 @@ const About = () => {
 
   return (
     <div className="about mt-1">
-      <div className="logo-about" data-AOS="fade-right">
+      <div className="logo-about" data-aos="fade-right">
         {/* <div className='blue'>
           <img src={blueImages[currentImageIndex]}  alt="" />
         </div> */}
@@ -55,7 +54,7 @@ const About = () => {
           <img src={blueImages[(currentImageIndex + 1) % blueImages.length]} alt="" />
         </div> */}
       </div>
-      <div className="about-elements" >
+      <div className="about-elements">
         <div
           data-aos="fade-right"
           data-aos-duration="2000"
@@ -93,8 +92,9 @@ const About = () => {
           {/* <div data-aos="fade-left" data-aos-duration="2000"  className='about-btn mb-5 d-flex justify-content-center'>
           <button className='btn btn-outline-dark'>Contact Us</button></div> */}
         </div>
-
       </div>
+      
+  
     </div>
   );
 };

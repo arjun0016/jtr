@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 import { categories } from './categoryData';
 
 
-
 const ServicePage = () => {
   const images =["https://smartlab-pi.vercel.app/images/background/service-parllax-1-1.png","https://smartlab-pi.vercel.app/images/resources/2.JPG","https://smartlab-pi.vercel.app/images/background/inner-banner-bg-1-1.jpg"]
 

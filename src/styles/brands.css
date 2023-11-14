@@ -1,0 +1,95 @@
+.brands-heading{
+    position:absolute;
+    top:20%;
+    left: 5%;
+    width: 500px;
+    z-index: 100;
+  }
+  .brands-heading h2{
+    font-weight: 800;
+  }
+  .about-img {
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+  
+  
+    
+    
+    /* flex-wrap: wrap; */
+  }
+  .color-overlay {
+    height: 300px;
+  
+  }
+  
+  .about-img img {
+    width: 100%;
+    object-fit: cover;
+    /* height: 300px; */
+  
+  }
+  
+  
+  .scrolling-brands {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    white-space: nowrap;
+    font-size: 100px;
+    animation: scrollText 20s linear infinite;
+    display: flex;
+    justify-content:space-between;
+    width:200%;
+    overflow: hidden !important;
+    gap: 0;
+  }
+  .scrolling-brands:hover{
+    animation-play-state:paused ;
+  }
+  .scrolling-bimg{
+    perspective:100px;
+  }
+  
+  
+  .scrolling-bimg img {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    margin-left:30px ;
+    transition:transform 0.1s;
+  }
+  .scrolling-bimg img:hover {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    transform:translatez(20px);
+  }
+  
+  
+  
+  
+  
+  @keyframes scrollText {
+    0% {
+      transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+      transform: translateX(-100%); /* End off-screen to the left */
+    }
+    
+    
+  }
+  @media screen and (max-width:991px) {
+    .scrolling-brands{
+      width: 380%;
+    }
+    
+  }
+  
+  @media screen and (max-width:768px){
+    .scrolling-brands{
+      width: 520%;
+    }
+  }
+  

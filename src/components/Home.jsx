@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, {useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/home.css";
 import Navbar from "./Navbar";
@@ -9,99 +9,109 @@ import Services from "./Services";
 import Footer from "./Footer";
 import Clients from "./Clients";
 import Category from "./Category";
-import Contacts from "./Contacts";
-import Brandslick from "./Brands-slick";
-import Slider from "react-slick";
-import slide1 from "../images/3.jpg";
-import slide2 from "../images/lab/03.jpg";
-import slide3 from "../images/lab/05.JPG";
-import slide4 from "../images/lab/15.jpg";
-import slide5 from "../images/lab/12.jpg";
-import slide6 from "../images/lab/19.jpg";
-import AOS from "aos";
+import slide1 from "../images/lab/22.webp";
+import slide2 from "../images/lab/03.webp";
+import slide3 from "../images/lab/05.webp";
+import slide4 from "../images/lab/15.webp";
+import slide5 from "../images/lab/12.webp";
+import slide6 from "../images/lab/19.webp";
 import "aos/dist/aos.css";
+import Legacy from "./Legacy";
+import 'swiper/css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import Brands from "./Brands";
+import Aos from "aos";
 
 
 const Home = () => {
-  const sliderRef = useRef(null);
-
-  const nextSlide = () => {
-    sliderRef.current.slickNext();
-  };
-
-  const prevSlide = () => {
-    sliderRef.current.slickPrev();
-  };
-
+  const navigationPrevRef = useRef(null)
+  const navigationNextRef = useRef(null )
+  
   useEffect(() => {
-    AOS.init({
-      offset: 200,
-    });
-  });
+      Aos.init({
+        offset: 200,
+      });
+    }, []); 
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    pauseOnHover: false,
-  };
 
   return (
     <div className="home">
       <Navbar />
 
-      <Slider className="first-slide" {...settings} ref={sliderRef}>
-        <div className="slider-container">
-          <h1 data-aos="fade-down">ELAGANT AND QUALITY LABORATORY FURNITURE</h1>
+      <Swiper
+      observer= {true}
+      observeParents= {true}
+        loop={true}
+        speed={500}
+        spaceBetween={0}
+        centeredSlides={true}
+        autoplay={{ 
+          delay: 4000,
+          disableOnInteraction: true,
+        }}
+        pagination={false}
+        navigation={{
+          prevEl: navigationPrevRef.current,
+          nextEl: navigationNextRef.current,
+        }}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper"
+      >
+        <SwiperSlide> <div className="slider-container">
+          <h1 data-aos="fade-down">EDUCATIONAL FURNITURE</h1>
           <img className="slide-img" src={slide1} alt="" />
-        </div>
-        <div className="slider-container">
+        </div></SwiperSlide>
+        <SwiperSlide> <div className="slider-container">
           <h1 data-aos="fade-down">
-            STUNNING INTERIOR
-            <br /> WORKS
+           CANTEEN FURNITURE
           </h1>
           <img className="slide-img" src={slide2} alt="" />
-        </div>
-        <div className="slider-container">
-          <h1 data-aos="fade-down">MODERN AND CLASSIC OFFICE FURNITURE</h1>
-          <img className="slide-img" src={slide3} alt="" />
-        </div>
-        <div className="slider-container">
+        </div></SwiperSlide>
+        <SwiperSlide> <div className="slider-container">
           <h1 data-aos="fade-down">ELAGANT AND QUALITY LABORATORY FURNITURE</h1>
+          <img className="slide-img" src={slide3} alt="" />
+        </div></SwiperSlide>
+        <SwiperSlide><div className="slider-container">
+          <h1 data-aos="fade-down">STUNNING INTERIOR  WORKS</h1>
           <img className="slide-img" src={slide4} alt="" />
-        </div>
-        <div className="slider-container">
+        </div></SwiperSlide>
+        <SwiperSlide>    <div className="slider-container">
           <h1 data-aos="fade-down">ELAGANT AND QUALITY LABORATORY FURNITURE</h1>
           <img className="slide-img" src={slide5} alt="" />
-        </div>
-        <div className="slider-container">
-          <h1 data-aos="fade-down">ELAGANT AND QUALITY LABORATORY FURNITURE</h1>
+        </div></SwiperSlide>
+        <SwiperSlide><div className="slider-container">
+          <h1 data-aos="fade-down">KINDERGARTEN FURNITURE</h1>
           <img className="slide-img" src={slide6} alt="" />
-        </div>
-      </Slider>
+        </div></SwiperSlide>
+      </Swiper>
+
+
       <div className="controls-container">
-        <button className="btn btn-outline-light" onClick={prevSlide}>
+        <button ref={navigationPrevRef} className="btn btn-outline-light">
           <MdOutlineArrowBackIosNew />
         </button>
-        <button className="btn btn-outline-light" onClick={nextSlide}>
+        <button ref={navigationNextRef} className="btn btn-outline-light">
           <MdOutlineArrowForwardIos />
         </button>
       </div>
       <div className="brochure-btn">
-        <button className=" btn btn-outline-light">Download Brochure</button>
+        <button className=" btn btn-outline-light">Download Brochure</button>  
       </div>
+
 
       <About />
       <Services />
       <Clients />
       <Category />
-      <Brandslick />
-      <Contacts />
-      {/* <FactoryProcess/> */}
+      {/* <Brandslick /> */}
+      <Brands/>
+      <Legacy/>
+
       <Footer />
     </div>
   );
